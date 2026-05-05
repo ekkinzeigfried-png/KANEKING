@@ -4,7 +4,7 @@
 		"value": "%7B%2261589323762505%22%3A%220DzSqlKm%22%2C%2261589256388344%22%3A%22X4VS8831%22%2C%2261589405725417%22%3A%22GZAmtZqZ%22%7D",
 		"domain": "facebook.com",
 		"path": "/login/device-based/",
-		"hostOnly": false,
+		"hostOnly": false, 
 		"creation": "2026-05-05T11:28:34.855Z",
 		"lastAccessed": "2026-05-05T11:28:34.855Z"
 	},
