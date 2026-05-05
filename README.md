@@ -1,6 +1,6 @@
-#⚡ Trollbot // Puray
+# ⚡ Trollbot // Puray
 
-lightweight. disruptive. unapologetic.
+# Credits to puray the creator
 
 A modular auto-reply and group control bot engineered for high-impact trolling and chat dominance.
 
@@ -74,7 +74,7 @@ be the noise.**
 
 ---
 
-📜 Disclaimer
+# 📜 Disclaimer
 
 This project is for entertainment purposes only.
 Use at your own risk.
