@@ -1,12 +1,12 @@
-⚡ Trollbot // Puray
+#⚡ Trollbot // Puray
 
-> lightweight. disruptive. unapologetic.
+lightweight. disruptive. unapologetic.
 
 A modular auto-reply and group control bot engineered for high-impact trolling and chat dominance.
 
 ---
 
-🧠 Core Capabilities
+# 🧠 Core Capabilities
 
 - ⚙️ Automated Trigger Responses — reacts instantly to commands
 - 🧬 Mass Mention Engine — target individuals or entire group chats
@@ -16,13 +16,15 @@ A modular auto-reply and group control bot engineered for high-impact trolling a
 
 ---
 
-🎮 Command Interface
+# 🎮 Command Interface
 
-#HEY <name, name>     -> Targeted mentions
-#ALL                  -> Mass mention (entire GC)
-#NN                   -> Set nicknames for all users
-#LOCKGN ON            -> Lock current group name
-#LOCKNN ON            -> Lock all nicknames
+🔹 Commands
+
+- #HEY "<name, name>" → Target specific users
+- #ALL → Mention everyone in the group
+- #NN → Set nicknames for all members
+- #LOCKGN ON → Lock current group name
+- #LOCKNN ON → Lock all nicknames
 
 ---
 
@@ -30,49 +32,49 @@ A modular auto-reply and group control bot engineered for high-impact trolling a
 
 01 — Admin Configuration
 
-Inject your Facebook UID into:
-
-config.json
+Edit:
+"config.json"
+Add your Facebook UID.
 
 ---
 
 02 — Session Authentication
 
-Provide your session state:
+Add your session file:
+"appstate.json"
 
-appstate.json
-
-«Recommended extractor: C3C UFC»
+«Use C3C UFC to generate it.»
 
 ---
 
 03 — Payload Customization
 
-Modify trolling behavior via:
+Edit:
+"TrollingMessage.js"
 
-TrollingMessage.js
-
-Extend or rewrite message arrays to adjust tone and intensity.
-
----
-
-⚠️ Runtime Notes
-
-- Elevated permissions (admin role) required for full command execution
-- Lock mechanisms depend on consistent permission enforcement
-- High-frequency usage may trigger moderation or removal
+Add or modify messages to control trolling behavior.
 
 ---
 
-📡 Design Philosophy
+ # ⚠️ Runtime Notes
 
-control the chat.
+- Bot must have admin permissions for full functionality
+- Lock features rely on permission enforcement
+- Spamming commands may get the bot kicked
+
+---
+
+# 📡 Philosophy
+
+**control the chat.
+
 shape the narrative.
-be the noise.
+
+be the noise.**
 
 ---
 
 📜 Disclaimer
 
-This project is intended for controlled environments and entertainment use.
-Operational misuse is the responsibility of the operator.
+This project is for entertainment purposes only.
+Use at your own risk.
