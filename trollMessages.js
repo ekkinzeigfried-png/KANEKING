@@ -1,6 +1,6 @@
 module.exports = {
     messages: [
-        "FastLubat","Purket MatabaKa Ei Mag Gaganyan Kana","BalakajanTaba Ang Bigat Muna Eii","TabaChuPaen Munga UtenKo Kung/Kong Tutuoo Yan Haupka Aaa",
+        "FastLubat","Purket MatabaKa Ei Mag Gaganyan Kana","BalakajanTaba Ang Bigat Muna Eii","TabaChuPaen Munga UtenKo Kung/Kong Tutuoo Yan Haupka Aaa","Taba Pwde Kana Mag Off Ang Bigat Na Eii","TabaWagKang Magalet Jan Umuusok Na Ilong Mo Eii","Taba WagKang Sabat Ng/Nang Sabat D Ka Nmn Kaosap Eiii","TabaWagKang Mag Pasikat Jan Sa Gurls Akala Mo maGuGustohan Ka Nyan Eii",
         "WlaNa Mag J-Juk Na Nmn Ung Napaka Corny HaupNayan","WagKana Nga Mag Juk Jan NakakaAsar Na E Subrang Corny",
         "WgKang Sasabat Jan WlaPako PamBili DugFood Eeiii","Kung/Kong Dika Naasar TutuOkan Munga Ng/Nang Baril Ulo Mamamo Tas Sabihin Mo WlaKangKwenta","Kung/Kong Tutuong TaoKa Tutuokan Mo Ng/Nang Toothpick Sa Leeg MamaMo",
         "Oy Taba WgKang SisiGaw Jan Ah","Taba Ayusin Mo Jan Pananalita Mo Ha","TabaWag Kang Sigaw Nang Sigaw Ang Ingay Muna Eiii",
