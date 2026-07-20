@@ -1,14 +1,14 @@
 module.exports = {
     messages: [
-        "FastLubat","Purket MatabaKa Ei Mag Gaganyan Kana","BalakajanTaba Ang Bigat Muna Eii","TabaChuPaen Munga UtenKo Kung/Kong Tutuoo Yan Haupka Aaa","Taba Pwde Kana Mag Off Ang Bigat Na Eii","TabaWagKang Magalet Jan Umuusok Na Ilong Mo Eii","Taba WagKang Sabat Ng/Nang Sabat D Ka Nmn Kaosap Eiii","TabaWagKang Mag Pasikat Jan Sa Gurls Akala Mo maGuGustohan Ka Nyan Eii","Taba WgKana Mag Kwento Ala Nmn Nabasa Eii",
-,        "WlaNa Mag J-Juk Na Nmn Ung Napaka Corny HaupNayan","WagKana Nga Mag Juk Jan NakakaAsar Na E Subrang Corny","Hilig Mag Kwento Netong TabaNato Kla Ata May Nag Babasa Eii","WalaNa Didiretso Na Nmn Sa Kusena Tong Si Taba","Na D-distract Ako Sa Bilbel Mo Eii Haupka","Bili KaNga Yosi Ron Taba Haupkang Utosan Ka Eii","Taba Napaka Reklamador Mo E Anlakas Lakas Mo Nmn Kumaen Eii",
-        "WgKang Sasabat Jan WlaPako PamBili DugFood Eeiii","Kung/Kong Dika Naasar TutuOkan Munga Ng/Nang Baril Ulo Mamamo Tas Sabihin Mo WlaKangKwenta","Kung/Kong Tutuong TaoKa Tutuokan Mo Ng/Nang Toothpick Sa Leeg MamaMo",
-        "Oy Taba WgKang SisiGaw Jan Ah","Taba Ayusin Mo Jan Pananalita Mo Ha","TabaWag Kang Sigaw Nang Sigaw Ang Ingay Muna Eiii",
-        "WgKana Sumabat D Nmn Kita Ppwetan Jan Eeii","Baka Akala MoLng Na Ppwetan Kita Jan Eii","Inom Kana Gamot Mo Kase Kausap Mo Nmn Troma Mo",
-        "O Baket Ka Nagagalet Purket Na Kalat Kolng Na Utosan Lng Kita Ng/Nang Yosi Nuon Eeii","BawalKa Magalet Baka Kasalanan Kopa Pag Na HighBlood Ka Ee",
-        "Pass Ang Bigat Mo", "SaSubrang Tabamo Pati Lolamo Napa Sabe Ng/Nang Wtf", "oyyy wehhhhhh?????", "panis ako ah", "wala iwanan to aso", "nakopo", "o ano", "oy wehhh?", "Loh Sasabat Pa Talaga Tong BinogBog Kolng Since WorldWar 1 Sa RpWorld Eii", "Pati Si Papa Mo Na Guilty Nung Pag Labas Mo Sa Belat Ni Mamamo Anlake Muba Nmn", "SaSubrang Panget Mo Kahit Retoke Di Na Kakayanen", "SaSubrang Bigat Mo Pati Timbangan Napa Soko Mo Haupka", "SaSubrang Tabachoy Mo Taga Nasa Kusena Ka Nasa Isip Agad Name Na May World War3 na SaKusena", "Kung Patabaan Lng Ang Usapan Ikw Lage Pang Bato Sa Baranggay Niyo", "GrabeKa Pala Laging Nasa List Ka Ng/Nang The Most Panget In The World", "SaSubrang Lake Mo Nung PinaNganak Ka Patay Agad Si Mamamo",
+        "ha","o","ey","ahh","we","ohh","weh","ih","ehh?",
+,        "oh sge","oh ano","oh tapos","tutuo bayan","weeehhh","huh",
+        "shupapsmonato","chupaenmoto","eh?",
+        "chupapsmoto","pakiko","sge",
+        "haaa","wehh???",
+        "pakikonga","pakekoo",
+        "Pass Ang Bigat Mo", "SaSubrang Tabamo Pati Lolamo Napa Sabe Ng/Nang Wtf", "oyyy wehhhhhh?????", "panis ako ah", "oh??", "nakopo", "o ano", "oy wehhh?", "Loh", "pake", "pakiko", "tabamo", "tabamo e", "sge tabamo", "otapos", "pakikonga",
         "SaSubrangTaba Mo Pati Timbangan NapaSabe Ng/Nang Pass",
-        "OhWagKana Sumabat D Nmn Kita Ppwetan Jan Eii", "Last Munayan Taba Ang Asim Na Ng/Nang Batok Mo Eiii", "Loh WagKanga Jan Mag Crave Ng/Nang UtenKo", "PastLubat", "Past Sau Mataba Ka Eeeii", "Hahahah Grabe Tawa Ng/Nang Lola Mong Pataba Nlng Sa Lupa", "SaSubrang Cornymo Pati Si Father Napa WatdaFuck", "Eh Pass Sau Baka Lamunin Mupa Utenko Ee", "Tigilan MoTong UtenKo PlsLang O","walang may","cno may","cno nag","naines si","nainis mo si","nagalet si","ohtapos","ohtas","oh ano","saan","we","wee tutuo bayan","dinga","dingaa??","ahh","cgelang","ayukonga","fastbadingka",
+        "Ohhhh", "we tutuoba", "weehhhh", "wla nmn", "huh??", "oy", "bakit nga", "bakitba", "bakit?","walang may","cno may","cno nag","naines si","nainis mo si","nagalet si","ohtapos","ohtas","oh ano","saan","we","wee tutuo bayan","dinga","dingaa??","ahh","cgelang","ayukonga","fastbadingka",
     ]
 };
  
