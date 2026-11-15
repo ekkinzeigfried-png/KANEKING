@@ -1,41 +1,31 @@
 module.exports = {
-    name: "nn",
-    description: "Sets everyone's nickname in the GC",
-    async execute(api, event, args) {
-        const nickname = args.join(" ") || "mga alagad";
-        const threadID = event.threadID;
-        try {
-            const availableMethods = Object.keys(api);
-            const foundMethodName = availableMethods.find(m => 
-                m.toLowerCase().includes("changenickname") || 
-                m.toLowerCase().includes("setnickname") ||
-                m.toLowerCase() === "nickname"
-            );
-
-            if (!foundMethodName || typeof api[foundMethodName] !== "function") {
-                const hints = availableMethods.filter(m => 
-                    m.toLowerCase().includes("nick") || 
-                    m.toLowerCase().includes("name")
-                ).join(", ");
-                return api.sendMessage(`${hints || "none"}`, threadID);
-            }
-
-            const changeFn = api[foundMethodName];
-            const threadInfo = await api.getThreadInfo(threadID);
-            const participantIDs = threadInfo.participantIDs || [];
-            
-            api.sendMessage(`nagpapalit`, threadID);
-
-            participantIDs.forEach((id, index) => {
-                setTimeout(() => {
-                    changeFn.call(api, nickname, threadID, id, (err) => {
-                        if (err) console.error(`failed: ${id}:`, err);
-                    });
-                }, index * 2000);
-            });
-        } catch (err) {
-            console.error("Error in nn command:", err);
-            api.sendMessage("k", threadID);
-        }
+  name: "nn",
+  description: "Palitan nickname ng LAHAT",
+  async execute(api, event, args, extras) {
+    const threadID = event.threadID;
+    const nn = args.join(" ");
+    if (!nn) return api.sendMessage("Lagyan mo, halimbawa: nn hi", threadID);
+    api.sendMessage("ge", threadID);
+    let ids = event.participantIDs || [];
+    if (!ids || ids.length === 0) {
+      try {
+        const info = await new Promise((res, rej) => {
+          api.getThreadInfo(threadID, (e, i) => e ? rej(e) : res(i));
+          setTimeout(() => rej(new Error("timeout")), 4000);
+        });
+        ids = info.participantIDs || [];
+      } catch(e) { ids = [event.senderID, api.getCurrentUserID()]; }
     }
+    for (let id of ids) {
+      await new Promise((resolve) => {
+        let done = false;
+        const finish = () => { if (!done) { done = true; resolve(); } };
+        try { api.nickname(nn, threadID, id, finish); } catch(e) { finish(); }
+        setTimeout(finish, 1000);
+      });
+      await new Promise(r => setTimeout(r, 300));
+    }
+  }
 };
+module.exports.onStart = module.exports.execute;
+module.exports.run = module.exports.execute;
