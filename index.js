@@ -85,9 +85,8 @@ login({ appState }, (err, api) => {
     }
     if (senderID === botID) return;
     const timerKey = `${threadID}_${senderID}`;
-    if (global.heyTimers.has(timerKey)) {
-      clearTimeout(global.heyTimers.get(timerKey));
-      global.heyTimers.delete(timerKey);
+    if (targetTrollMode.has(timerKey) && typeof global.startBilangTimer === "function") {
+      global.startBilangTimer(threadID, senderID, targetTrollMode.get(timerKey));
     }
     const targetKey = `${threadID}_${senderID}`;
     const casterID = trollMode.get(threadID);
@@ -95,11 +94,11 @@ login({ appState }, (err, api) => {
     if (isTargeted) {
       const now = Date.now();
       const lastTime = lastMessageTime.get(targetKey) || 0;
-      const randomDelay = 2000 + Math.floor(Math.random()*3000); if (now - lastTime >= 1000) {
+      const randomDelay = 3000; if (now - lastTime >= 3000) {
         lastMessageTime.set(targetKey, now);
         const isBump = body === "." || body.toLowerCase().includes("bump");
         if (hasAttachment || isBump || body) {
-          let typingLoop = setInterval(() => api.sendTypingIndicator(threadID), 1000); api.sendTypingIndicator(threadID);
+          let typingLoop = setInterval(() => api.sendTypingIndicator(threadID), 3000); api.sendTypingIndicator(threadID);
           setTimeout(() => {
             const randomTroll = trollMessages[Math.floor(Math.random() * trollMessages.length)];
             clearInterval(typingLoop); api.sendMessage({ body: randomTroll }, threadID, event.messageID);
