@@ -61,11 +61,9 @@ login({ appState }, (err, api) => {
         return api.nickname(oldUsername, cthreadID, victimID);
       }
     }
-    if (event.senderID === botID && (event.type === "message" || event.type === "message_reply") && event.messageID) {
-      setTimeout(() => {
-        api.setMessageReaction("😆", event.messageID, event.threadID, (err) => { if (err) { console.log("[selfreact] retry in 2s:", err.error || err); setTimeout(() => { try { api.setMessageReaction("😆", event.messageID, event.threadID, () => {}); } catch(e) {} }, 2000); } });
-      }, 200);
-    }
+  if (event.senderID === botID && (event.type === "message" || event.type === "message_reply") && event.messageID) {
+    setTimeout(()=>{ try{ const p=api.setMessageReaction("😆", event.messageID, event.threadID, ()=>{}); if(p && p.catch) p.catch(()=>{}); }catch{} }, 300);
+  }
     if (event.messageID) {
       if (processedMessages.has(event.messageID)) return;
       processedMessages.add(event.messageID);
