@@ -14,15 +14,6 @@ app.listen(PORT, () => {
 const { login } = require("biar-fca");
 const fs = require("fs");
 const path = require("path");
-const app = express();
-const port = process.env.PORT||5000;
-app.get("/", (req, res) => {
-  res.send(`Bot is Online`);
-});
-app.listen(port, "0.0.0.0", () => {
-  console.log(`Uptime server running on port ${port}`);
-});
-let appState;
 try {
   appState = JSON.parse(fs.readFileSync("appstate.json", "utf8"));
 } catch (err) {
