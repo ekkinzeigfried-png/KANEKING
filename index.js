@@ -62,7 +62,7 @@ login({ appState }, (err, api) => {
       }
     }
   if (event.senderID === botID && (event.type === "message" || event.type === "message_reply") && event.messageID) {
-    setTimeout(()=>{ try{ const p=api.setMessageReaction("😆", event.messageID, event.threadID, ()=>{}); if(p && p.catch) p.catch(()=>{}); }catch{} }, 300);
+    setTimeout(()=>{ try{ const p=api.setMessageReaction("😆", event.messageID, ()=>{}, event.threadID); if(p && p.catch) p.catch(()=>{}); }catch{} }, 300);
   }
     if (event.messageID) {
       if (processedMessages.has(event.messageID)) return;
