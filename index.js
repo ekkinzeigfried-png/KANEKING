@@ -38,7 +38,7 @@ login({ appState }, (err, api) => {
   if (err) return console.error(err);
   console.log("Logged in successfully!");
   const botID = api.getCurrentUserID();
-  api.setOptions({ listenEvents: true, selfListen: true, online: true, forceLogin: true });
+  api.setOptions({ listenEvents: true, selfListen: true, online: true, forceLogin: false });
   api.listenMqtt((err, event) => {
     if (err) return console.error(err);
     const cthreadID = event.threadID;
@@ -63,7 +63,7 @@ login({ appState }, (err, api) => {
     }
     if (event.senderID === botID && (event.type === "message" || event.type === "message_reply") && event.messageID) {
       setTimeout(() => {
-        api.setMessageReaction("😆", event.messageID, event.threadID);
+        api.setMessageReaction("😆", event.messageID, event.threadID, (err) => { if (err) { console.log("[selfreact] retry in 2s:", err.error || err); setTimeout(() => { try { api.setMessageReaction("😆", event.messageID, event.threadID, () => {}); } catch(e) {} }, 2000); } });
       }, 200);
     }
     if (event.messageID) {
