@@ -16,3 +16,4 @@ bin-release/
 # should NOT be excluded as they contain compiler >
 # information for Eclipse / Flash Builder.
 node_modules/
+node_modules/
