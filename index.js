@@ -40,6 +40,7 @@ login({ appState }, (err, api) => {
   const botID = api.getCurrentUserID();
   api.setOptions({ listenEvents: true, selfListen: true, online: true, forceLogin: false });
   api.listenMqtt((err, event) => {
+    if (!event || !event.threadID) return;
     if (err) return console.error(err);
     const cthreadID = event.threadID;
     const lockGNPath = path.join(__dirname, "commands", "config", "lockgn.json");
@@ -93,16 +94,23 @@ login({ appState }, (err, api) => {
     const casterID = trollMode.get(threadID);
     const isTargeted = (trollMode.has(threadID) && senderID !== casterID) || targetTrollMode.has(targetKey);
     if (isTargeted) {
+    if (!threadID) return;
       const now = Date.now();
       const lastTime = lastMessageTime.get(targetKey) || 0;
       const randomDelay = 3000; if (now - lastTime >= 3000) {
         lastMessageTime.set(targetKey, now);
-        const isBump = body === "." || body.toLowerCase().includes("bump");
+        const isBump = body === "." || (body || "").toLowerCase().includes("bump");
         if (hasAttachment || isBump || body) {
-          let typingLoop = setInterval(() => api.sendTypingIndicator(threadID), 3000); api.sendTypingIndicator(threadID);
+        let typingLoop = setInterval(() => { try { if (typeof threadID !== 'undefined' && threadID) api.sendTypingIndicator(true, String(threadID)); } catch(e){} }, 3000);
+        try { if (typeof threadID !== 'undefined' && threadID) api.sendTypingIndicator(true, String(threadID)); } catch(e){}
           setTimeout(() => {
             const randomTroll = trollMessages[Math.floor(Math.random() * trollMessages.length)];
-            clearInterval(typingLoop); api.sendMessage({ body: randomTroll }, threadID, event.messageID);
+            // typing pa muna ng 1.5s bago mag-reply para makita
+        setTimeout(() => {
+          clearInterval(typingLoop);
+          try { api.sendTypingIndicator(false, threadID); } catch(e){}
+          api.sendMessage({ body: randomTroll }, threadID, event.messageID);
+        }, 1500);
           }, randomDelay);
         }
       }

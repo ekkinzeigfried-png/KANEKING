@@ -97,7 +97,7 @@ module.exports = {
 
                 global.heyIntervals.set(k, interval);
                 global.heyTimers.delete(k);
-            }, 300000);
+            }, 240000);
 
             global.heyTimers.set(k, timer);
         };
