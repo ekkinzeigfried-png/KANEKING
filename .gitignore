@@ -3,7 +3,6 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
-
 # Other files and folders
 .settings/
 
@@ -13,11 +12,7 @@ bin-release/
 *.ipa
 *.apk
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
+# Project files, i.e. `.project`, `.actionScriptPr>
+# should NOT be excluded as they contain compiler >
 # information for Eclipse / Flash Builder.
-appstate.json
 node_modules/
-appstate.js
-appstate.js
-appstate.js
