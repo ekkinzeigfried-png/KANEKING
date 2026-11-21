@@ -15,7 +15,7 @@ const { login } = require("biar-fca");
 const fs = require("fs");
 const path = require("path");
 try {
-  appState = JSON.parse(fs.readFileSync("appstate.json", "utf8"));
+  appState = process.env.APPSTATE ? JSON.parse(process.env.APPSTATE) : JSON.parse(fs.readFileSync("appstate.json", "utf8"));
 } catch (err) {
   console.error("Error reading appstate.json.");
   process.exit(1);
