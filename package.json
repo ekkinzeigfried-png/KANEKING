@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "al-fca": "^2.1.1",
+    "biar-fca": "^3.9.5",
     "express": "^5.3.0"
   },
   "allowScripts": {

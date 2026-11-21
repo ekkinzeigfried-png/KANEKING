@@ -17,3 +17,5 @@ bin-release/
 # information for Eclipse / Flash Builder.
 node_modules/
 node_modules/
+appstate.json
+appstate.js

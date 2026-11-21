@@ -11,7 +11,7 @@ app.listen(PORT, () => {
 });
 
 
-const login = require("al-fca");
+const { login } = require("biar-fca");
 const fs = require("fs");
 const path = require("path");
 try {
