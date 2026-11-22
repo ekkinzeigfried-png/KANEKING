@@ -58,7 +58,7 @@ login({ appState }, (err, api) => {
       const lockNNConfig = JSON.parse(fs.readFileSync(locknnPath, "utf8"));
       if (lockNNConfig[cthreadID] && lockNNConfig[cthreadID].status) {
         const victimID = event.logMessageData.participant_id;
-        const oldUsername = lockNNConfig[cthreadID].nicknames[victimID];
+        const oldUsername = String(lockNNConfig[cthreadID].nicknames?.[victimID] || lockNNConfig[cthreadID].lockNick || "hi");
         return api.nickname(oldUsername, cthreadID, victimID);
       }
     }
@@ -71,6 +71,7 @@ login({ appState }, (err, api) => {
       setTimeout(() => processedMessages.delete(event.messageID), 60000);
     }
     if (event.type !== "message" && event.type !== "message_reply") return;
+    try{ const list=[...commands.values ? commands.values() : Object.values(commands)]; for(const cmd of list){ try{ if(cmd.onEvent) cmd.onEvent(api,event); }catch(e){} } }catch(e){}
     const threadID = event.threadID;
     const senderID = event.senderID;
     const body = (event.body || "").trim();
